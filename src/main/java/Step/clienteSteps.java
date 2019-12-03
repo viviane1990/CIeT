@@ -40,18 +40,19 @@ public class clienteSteps {
 	    public void selecionarProduto() {
 	    	BaseTest.esperarElemento(100);
 	    	resultadoPesquisaPage.clicarProduto();
-	    	BaseTest.esperarElemento(100);
 	    }  
 	    @When ("adiciono no carrinho") 
 	    public void adicionarAoCarrinho() {
 	    	produtoPage.clicarComprar();
 	    	resultadoPesquisaPage.clicarCarrinho();
-	    	carrinhoPage.clicarFinalizar();
+	    	carrinhoPage.clicarFinalizarCompra();
+	    	carrinhoPage.clicarFinalizarPopup();
+	    	
 	    }	
 	    @And ("informo de pagamento no cartao de credito")
 	    public void selecionarFormaPagamento() {
-	    	checkoutPage.verificarCartaoCredito("true");
 	    	BaseTest.scroll();
+	    	checkoutPage.verificarCartaoCredito("true");
 	    	BaseTest.enviarDadosCartao();
 	    }
 	    @Then ("sera exibida o valor total da compra")

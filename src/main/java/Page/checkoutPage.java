@@ -34,4 +34,15 @@ public class checkoutPage extends BasePage{
 		obterTexto(By.id("br.com.kanui:id/total_price"));
 		return null;
 	}
+	
+	public static checkoutPage validarProduto() {
+		obterTexto(By.id("br.com.kanui:id/product_name"));
+		return null;		
+	}
+	
+	public static checkoutPage validarQuantidade() {
+		obterTexto(By.id("br.com.kanui:id/product_quantity"));
+		return null;
+		
+	}
 }
