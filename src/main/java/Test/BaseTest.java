@@ -38,8 +38,7 @@ public class BaseTest {
 	public static void enviarProduto() {
 		Page.promocaoPage.inserirProduto("meias");
 		esperarElemento(100);
-		Page.promocaoPage.clicarEnterTeclado();
-		esperarElemento(100);
+		//Page.promocaoPage.clicarEnterTeclado();
 	}
 	
 	public static void enviarDadosCartao() {

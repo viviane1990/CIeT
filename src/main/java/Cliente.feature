@@ -25,7 +25,6 @@ Feature: Title of your feature
     And na tela Promocao pesquiso produto
     And na tela de resultados da pesquisa, seleciono produto 
     When adiciono no carrinho 
-    And informo os dados de entrega
     And informo de pagamento no cartao de credito
     Then sera exibida o valor total da compra
 

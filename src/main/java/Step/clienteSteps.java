@@ -26,26 +26,28 @@ public class clienteSteps {
 			homePage.ClicarLogin();
 			BaseTest.enviarUsuario();
 	    	BaseTest.enviarSenha();
-	  
-		}	   
-	    @And ("na tela Promocao pesquiso produto")
-	    public void pesquisarProduto() {
+		}	
+		@And ("na tela Promocao pesquiso produto")
+		 public void pesquisarProduto() {
 	    	entrarPage.clicarPromocao();
 	    	promocaoPage.clicarPesquisar();
 	    	BaseTest.esperarElemento(100);
 	    	BaseTest.enviarProduto();
-	    	
-	    }	
-	    @And ("na tela de resultados da pesquisa, seleciono produto ")
+	    	BaseTest.esperarElemento(100);
+	    	promocaoPage.clicarEnterTeclado();
+	    }
+	    @And ("na tela de resultados da pesquisa, seleciono produto") 
 	    public void selecionarProduto() {
+	    	BaseTest.esperarElemento(100);
 	    	resultadoPesquisaPage.clicarProduto();
-	    	
-	    }   	
-	    @When ("adiciono no carrinho")
+	    	BaseTest.esperarElemento(100);
+	    }  
+	    @When ("adiciono no carrinho") 
 	    public void adicionarAoCarrinho() {
 	    	produtoPage.clicarComprar();
+	    	resultadoPesquisaPage.clicarCarrinho();
 	    	carrinhoPage.clicarFinalizar();
-	    }	    	
+	    }	
 	    @And ("informo de pagamento no cartao de credito")
 	    public void selecionarFormaPagamento() {
 	    	checkoutPage.verificarCartaoCredito("true");
@@ -57,5 +59,4 @@ public class clienteSteps {
 	    	Assert.assertEquals(("br.com.kanui:id/total_price"), checkoutPage.validarTotalCompra());
 	    	BaseTest.deslogarAPP();
 	    }
-	   
 }
