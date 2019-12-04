@@ -35,4 +35,7 @@ Feature: Title of your feature
 		And altero quantidade do produto
 		Then sera exibido o carrinho com dois produtos iguais 
 	
-    
+    Scenario: Excluir um produto
+		Given visualizo o carrinho
+		When clico em excluir produto 
+		Then será exibido dois itens no carrinho
