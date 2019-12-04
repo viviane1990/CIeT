@@ -23,7 +23,7 @@ public class carrinhoPage extends BasePage {
 		clicar(By.id("br.com.kanui:id/md_control"));
 	}
 	
-	public static void validaQntProdutos() {
-		obterTexto(By.id("br.com.kanui:id/custom_checkout_items"));
+	public static String validaQntProdutos() {
+		return obterTexto(By.id("br.com.kanui:id/custom_checkout_items"));
 	}
 }

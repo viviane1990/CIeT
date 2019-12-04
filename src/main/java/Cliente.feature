@@ -29,4 +29,10 @@ Feature: Title of your feature
     Then sera exibida o valor total da compra
 
     
+   Scenario: Comprar de dois produtos iguais
+		Given pesquiso produto
+		When adiciono produto no carrinho
+		And altero quantidade do produto
+		Then sera exibido o carrinho com dois produtos iguais 
+	
     

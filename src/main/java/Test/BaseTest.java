@@ -38,8 +38,13 @@ public class BaseTest {
 	public static void enviarProduto() {
 		Page.promocaoPage.inserirProduto("meias");
 		esperarElemento(100);
-		//Page.promocaoPage.clicarEnterTeclado();
 	}
+	
+	public static void enviarOutroProduto() {
+		Page.promocaoPage.inserirProduto("oculos");
+		esperarElemento(100);
+	}
+	
 	
 	public static void enviarDadosCartao() {
 		checkoutPage.inserirNumeroCartao("5294043154782274");

@@ -9,6 +9,6 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "src/main/java/Cliente.feature",
 glue = { "" }, monochrome = true, dryRun = false)
 
-public class clienteTest extends BaseTest {
+public class comprarTest extends BaseTest {
 	
 }
